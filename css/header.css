@@ -1,7 +1,10 @@
 /* HEADER */
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+
     z-index: 1000;
     background: white;
     border-bottom: 1px solid #eee;
@@ -174,4 +177,12 @@
     justify-content: center;
 
     border-radius: 50%;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.nav a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #778ca3;
 }
