@@ -1,0 +1,49 @@
+/* SECTION */
+.advantages {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+/* TITLE */
+.section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #3d3d3d;
+}
+
+/* GRID */
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* CARD */
+.adv-card {
+    background: white;
+    padding: 40px 20px;
+
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+/* ICON */
+.adv-card img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+/* TEXT */
+.adv-card p {
+    font-size: 14px;
+    color: #6a4d67;
+    font-weight: 500;
+}
+
+/* HOVER 🔥 */
+.adv-card:hover {
+    transform: translateY(-5px);
+}
