@@ -1,0 +1,177 @@
+/* HEADER */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+/* КОНТЕЙНЕР */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ВНУТРІШНЯ ЧАСТИНА */
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+
+/* НАВІГАЦІЯ */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #57606f;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #6a4d67;
+}
+
+/* ПРАВА ЧАСТИНА */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+/* МЕНЮ */
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background: #f1f2f6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+
+    min-width: 220px;
+
+    flex-direction: column;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* ЕЛЕМЕНТИ СПИСКУ */
+.dropdown-menu a {
+    display: block;
+    padding: 8px 10px;
+    color: #57606f;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: #dcdde1;
+}
+
+/* ПОКАЗ МЕНЮ */
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+/* ПОКАЗ логотипа*/
+.logo img {
+    height: 40px;   /* або 45 */
+    width: auto;
+}
+.nav a {
+    color: #778ca3;  /* ось цей */
+}
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 5px;        /* 👈 відстань між іконкою і текстом */
+    text-decoration: none;
+    color: #778ca3;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+}
+.icon {
+    transition: 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.cart {
+    position: relative;
+    width: 26px;
+    height: 26px;
+}
+
+/* ОБИДВІ НА ОДНОМУ МІСЦІ */
+.cart img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.3s;
+}
+
+/* темна спочатку прихована */
+.cart-dark {
+    opacity: 0;
+}
+
+/* 🔥 hover */
+.cart:hover .cart-dark {
+    opacity: 1;
+}
+
+.cart:hover .cart-light {
+    opacity: 0;
+}
+.cart {
+    position: relative;
+    width: 24px;
+}
+
+.cart-icon {
+    width: 100%;
+}
+
+/* кружок */
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+
+    background: #6a4d67;
+    color: white;
+
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+}

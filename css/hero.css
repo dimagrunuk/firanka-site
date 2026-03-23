@@ -1,0 +1,10 @@
+.hero {
+    display: flex;
+    padding: 100px 0;
+    background: #dfe4ea;
+}
+
+.container {
+    display: flex;
+    gap: 50px;
+}
