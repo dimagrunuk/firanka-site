@@ -6,7 +6,6 @@ async function loadSection(id, file) {
 
 loadSection("header", "sections/header/header.html");
 loadSection("hero", "sections/hero/hero.html");
-loadSection("footer", "sections/footer/footer.html");
 loadSection("advantages", "sections/advantages/advantages.html");
 loadSection("catalog", "sections/catalog/catalog.html");
 loadSection("banner", "sections/banner/banner.html");
@@ -14,7 +13,8 @@ loadSection("reviews", "sections/reviews/reviews.html");
 loadSection("instagram", "sections/instagram/instagram.html");
 loadSection("products", "sections/products/products.html");
 loadSection("portfolio", "sections/portfolio/portfolio.html");
-
+loadSection("contact", "sections/contact/contact.html");
+loadSection("footer", "sections/footer/footer.html");
 let index = 0;
 
 function startSlider() {
@@ -45,4 +45,10 @@ dots.forEach(dot => {
         dots.forEach(d => d.classList.remove('active'));
         dot.classList.add('active');
     });
+});
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
 });

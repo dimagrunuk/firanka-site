@@ -31,7 +31,7 @@
     transition: 0.3s;
 }
 
-/* HOVER 🔥 */
+/* HOVER  */
 .instagram-item:hover img {
     transform: scale(1.05);
 }

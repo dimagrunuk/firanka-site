@@ -1,0 +1,83 @@
+.footer {
+    background: #f5f6fa;
+    padding: 20px 0;
+}
+
+/* GRID */
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* COL */
+.footer-col {
+    flex: 1;
+}
+
+/* LOGO */
+.logo img {
+    width: 180px;
+}
+
+/* LIST */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col li {
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-col li:hover {
+    color: #6a4d67;
+}
+
+/* LINKS */
+.footer-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    font-size: 13px;
+    color: #888;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #6a4d67;
+}
+
+/* CONTACTS */
+.footer-col p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* SOCIAL */
+.socials {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.socials img {
+    width: 22px;
+    height: 22px;
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.socials img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
