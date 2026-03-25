@@ -92,3 +92,16 @@
     max-width: 500px;
     text-align: justify;
 }
+
+/* ========== РОЗШИРЕННЯ КОНТЕЙНЕРА ========== */
+.container {
+    max-width: 1600px !important;
+    margin: 0 auto !important;
+    padding: 0 30px !important;
+}
+
+/* Щоб hero розтягнувся */
+.hero-inner {
+    justify-content: space-between !important;
+    gap: 80px !important;
+}
