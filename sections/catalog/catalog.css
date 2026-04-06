@@ -44,3 +44,8 @@
 .product-card:hover {
     transform: translateY(-5px);
 }
+.product-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
