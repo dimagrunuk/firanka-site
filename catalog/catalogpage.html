@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Firanka</title>
+    <link rel="stylesheet" href="catalogpage.css">
+</head>
+<body>
+
+<!-- ХЕДЕР -->
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="../assets/imagesheader/Logo.webp" alt="Firanka">
+            </div>
+            <nav class="nav">
+                <a href="#">Каталог</a>
+                <a href="#">Портфоліо</a>
+                <a href="#">Блог</a>
+                <a href="#">Контакти</a>
+                <a href="tel:0979271464" class="phone">097 927-14-64</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- ОСНОВНИЙ КОНТЕНТ -->
+<main>
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="../index.html">Home</a> / <span>Каталог</span>
+        </div>
+
+        <div class="catalog-wrapper">
+
+            <!-- ФІЛЬТРИ -->
+            <aside class="catalog-sidebar">
+                <h2 class="sidebar-title">Фільтри</h2>
+                <input type="text" class="filter-input" placeholder="Пошук по каталогу">
+                <input type="text" class="filter-input" placeholder="від А до Я" readonly>
+
+                <button class="filter-section">
+                    <span>Колір</span>
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <button class="filter-section">
+                    <span>Малюнок тканини</span>
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <button class="filter-section">
+                    <span>Висота виробу</span>
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <button class="filter-section">
+                    <span>Довжина по карнизу</span>
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+
+                <button class="filter-reset">Скинути фільтра</button>
+                <p class="filter-count">знайдено 237 товарів з <strong>237</strong></p>
+            </aside>
+
+            <!-- ТОВАРИ -->
+            <div class="catalog-main">
+                <h1 class="catalog-main-title">Каталог</h1>
+                <div class="product-grid" id="productGrid">
+
+                    <!-- Товар 1 -->
+                    <div class="product-card">
+                        <div class="card-image">
+                            <img src="../catalog/catalog1.jpeg" alt="Ламбрекен">
+                            <div class="card-badges">
+                                <span class="badge-code">код: 140_1л</span>
+                                <span class="badge-size">2м</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ажурний ламбрекен 2 м Бузковий (140_1л)</h3>
+                            <div class="card-price">
+                                <span class="price-main">1 520 грн</span>
+                                <span class="price-unit">за комплект</span>
+                            </div>
+                            <div class="card-stock">
+                                <span class="stock-label">в наявності</span>
+                                <span class="stock-count">1</span>
+                                <span class="stock-unit">комплект</span>
+                            </div>
+                            <button class="btn-add">Додати до кошика</button>
+                        </div>
+                    </div>
+
+                    <!-- Товар 2 -->
+                    <div class="product-card">
+                        <div class="card-image">
+                            <img src="../catalog/catalog2.jpeg" alt="Ламбрекен">
+                            <div class="card-badges">
+                                <span class="badge-code">код: 140_8л</span>
+                                <span class="badge-size">3м</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ажурний жорсткий ламбрекен оливкового кольору, 3м (140_8л)</h3>
+                            <div class="card-price">
+                                <span class="price-main">2 600 грн</span>
+                                <span class="price-unit">за комплект</span>
+                            </div>
+                            <div class="card-stock">
+                                <span class="stock-label">в наявності</span>
+                                <span class="stock-count">1</span>
+                                <span class="stock-unit">комплект</span>
+                            </div>
+                            <button class="btn-add">Додати до кошика</button>
+                        </div>
+                    </div>
+
+                    <!-- Товар 3 -->
+                    <div class="product-card">
+                        <div class="card-image">
+                            <img src="../catalog/catalog3.jpeg" alt="Ламбрекен">
+                            <div class="card-badges">
+                                <span class="badge-code">код: 140_5л</span>
+                                <span class="badge-size">2,5м-3м</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ажурний жорсткий ламбрекен рудого кольору, 2,60м (140_5л)</h3>
+                            <div class="card-price">
+                                <span class="price-main">2 400 грн</span>
+                                <span class="price-unit">за комплект</span>
+                            </div>
+                            <div class="card-stock">
+                                <span class="stock-label">в наявності</span>
+                                <span class="stock-count">1</span>
+                                <span class="stock-unit">комплект</span>
+                            </div>
+                            <button class="btn-add">Додати до кошика</button>
+                        </div>
+                    </div>
+
+                    <!-- Товар 4 -->
+                    <div class="product-card">
+                        <div class="card-image">
+                            <img src="../catalog/catalog4.jpeg" alt="Ламбрекен">
+                            <div class="card-badges">
+                                <span class="badge-code">код: 140_7л</span>
+                                <span class="badge-size">2м</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ажурний жорсткий ламбрекен чорного кольору, 2м (140_7л)</h3>
+                            <div class="card-price">
+                                <span class="price-main">3 000 грн</span>
+                                <span class="price-old">3 500 грн</span>
+                                <span class="price-unit">за комплект</span>
+                            </div>
+                            <div class="card-stock">
+                                <span class="stock-label">в наявності</span>
+                                <span class="stock-count">1</span>
+                                <span class="stock-unit">комплект</span>
+                            </div>
+                            <button class="btn-add">Додати до кошика</button>
+                        </div>
+                    </div>
+
+                    <!-- Товар 5 -->
+                    <div class="product-card">
+                        <div class="card-image">
+                            <img src="../catalog/catalog1.jpeg" alt="Ламбрекен">
+                            <div class="card-badges">
+                                <span class="badge-code">код: 142_2л</span>
+                                <span class="badge-size">2м</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ажурний жорсткий ламбрекен 2 м, венге (142_2л)</h3>
+                            <div class="card-price">
+                                <span class="price-main">2 800 грн</span>
+                                <span class="price-unit">за комплект</span>
+                            </div>
+                            <div class="card-stock">
+                                <span class="stock-label">в наявності</span>
+                                <span class="stock-count">2</span>
+                                <span class="stock-unit">комплект</span>
+                            </div>
+                            <button class="btn-add">Додати до кошика</button>
+                        </div>
+                    </div>
+
+                    <!-- Товар 6 -->
+                    <div class="product-card">
+                        <div class="card-image">
+                            <img src="../catalog/catalog2.jpeg" alt="Ламбрекен">
+                            <div class="card-badges">
+                                <span class="badge-code">код: 142_1л</span>
+                                <span class="badge-size">2м</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ажурний жорсткий ламбрекен 2 м, коричневий (142_1л)</h3>
+                            <div class="card-price">
+                                <span class="price-main">2 800 грн</span>
+                                <span class="price-unit">за комплект</span>
+                            </div>
+                            <div class="card-stock">
+                                <span class="stock-label">в наявності</span>
+                                <span class="stock-count">2</span>
+                                <span class="stock-unit">комплект</span>
+                            </div>
+                            <button class="btn-add">Додати до кошика</button>
+                        </div>
+                    </div>
+
+                    <!-- Товар 7 -->
+                    <div class="product-card">
+                        <div class="card-image">
+                            <img src="../catalog/catalog3.jpeg" alt="Ламбрекен">
+                            <div class="card-badges">
+                                <span class="badge-code">код: 142_3л</span>
+                                <span class="badge-size">2м</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ажурний жорсткий ламбрекен 2 м, венге (142_3л)</h3>
+                            <div class="card-price">
+                                <span class="price-main">1 600 грн</span>
+                                <span class="price-unit">за комплект</span>
+                            </div>
+                            <div class="card-stock">
+                                <span class="stock-label">в наявності</span>
+                                <span class="stock-count">1</span>
+                                <span class="stock-unit">комплект</span>
+                            </div>
+                            <button class="btn-add">Додати до кошика</button>
+                        </div>
+                    </div>
+
+                    <!-- Товар 8 -->
+                    <div class="product-card">
+                        <div class="card-image">
+                            <img src="../catalog/catalog4.jpeg" alt="Ламбрекен">
+                            <div class="card-badges">
+                                <span class="badge-code">код: 142_4л</span>
+                                <span class="badge-size">3м</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ажурний жорсткий ламбрекен 3м, венге (142_4л)</h3>
+                            <div class="card-price">
+                                <span class="price-main">2 000 грн</span>
+                                <span class="price-unit">за комплект</span>
+                            </div>
+                            <div class="card-stock">
+                                <span class="stock-label">в наявності</span>
+                                <span class="stock-count">1</span>
+                                <span class="stock-unit">комплект</span>
+                            </div>
+                            <button class="btn-add">Додати до кошика</button>
+                        </div>
+                    </div>
+
+                    <!-- Товар 9 -->
+                    <div class="product-card">
+                        <div class="card-image">
+                            <img src="../catalog/catalog1.jpeg" alt="Ламбрекен">
+                            <div class="card-badges">
+                                <span class="badge-code">код: 143_1л</span>
+                                <span class="badge-size">2,5м</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ажурний жорсткий ламбрекен бежевий, 2,5м (143_1л)</h3>
+                            <div class="card-price">
+                                <span class="price-main">2 200 грн</span>
+                                <span class="price-unit">за комплект</span>
+                            </div>
+                            <div class="card-stock">
+                                <span class="stock-label">в наявності</span>
+                                <span class="stock-count">1</span>
+                                <span class="stock-unit">комплект</span>
+                            </div>
+                            <button class="btn-add">Додати до кошика</button>
+                        </div>
+                    </div>
+
+                    <!-- Товар 10 -->
+                    <div class="product-card">
+                        <div class="card-image">
+                            <img src="../catalog/catalog2.jpeg" alt="Ламбрекен">
+                            <div class="card-badges">
+                                <span class="badge-code">код: 143_2л</span>
+                                <span class="badge-size">3м</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ажурний жорсткий ламбрекен золотий, 3м (143_2л)</h3>
+                            <div class="card-price">
+                                <span class="price-main">3 200 грн</span>
+                                <span class="price-unit">за комплект</span>
+                            </div>
+                            <div class="card-stock">
+                                <span class="stock-label">в наявності</span>
+                                <span class="stock-count">1</span>
+                                <span class="stock-unit">комплект</span>
+                            </div>
+                            <button class="btn-add">Додати до кошика</button>
+                        </div>
+                    </div>
+
+                    <!-- Товар 11 -->
+                    <div class="product-card">
+                        <div class="card-image">
+                            <img src="../catalog/catalog3.jpeg" alt="Ламбрекен">
+                            <div class="card-badges">
+                                <span class="badge-code">код: 143_3л</span>
+                                <span class="badge-size">2м</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ажурний жорсткий ламбрекен бордовий, 2м (143_3л)</h3>
+                            <div class="card-price">
+                                <span class="price-main">1 800 грн</span>
+                                <span class="price-unit">за комплект</span>
+                            </div>
+                            <div class="card-stock">
+                                <span class="stock-label">в наявності</span>
+                                <span class="stock-count">1</span>
+                                <span class="stock-unit">комплект</span>
+                            </div>
+                            <button class="btn-add">Додати до кошика</button>
+                        </div>
+                    </div>
+
+                    <!-- Товар 12 -->
+                    <div class="product-card">
+                        <div class="card-image">
+                            <img src="../catalog/catalog4.jpeg" alt="Ламбрекен">
+                            <div class="card-badges">
+                                <span class="badge-code">код: 143_4л</span>
+                                <span class="badge-size">2,5м</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ажурний жорсткий ламбрекен сірий, 2,5м (143_4л)</h3>
+                            <div class="card-price">
+                                <span class="price-main">2 500 грн</span>
+                                <span class="price-unit">за комплект</span>
+                            </div>
+                            <div class="card-stock">
+                                <span class="stock-label">в наявності</span>
+                                <span class="stock-count">2</span>
+                                <span class="stock-unit">комплект</span>
+                            </div>
+                            <button class="btn-add">Додати до кошика</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- КНОПКА "ПОКАЗАТИ БІЛЬШЕ" -->
+                <div class="load-more">
+                    <button class="load-more-btn" id="loadMoreBtn">Показати більше</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<!-- ФУТЕР -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <img src="../assets/imagesheader/Logo.webp" alt="Firanka" style="height: 40px;">
+            </div>
+            <div class="footer-col">
+                <h4>Категорії</h4>
+                <ul>
+                    <li><a href="#">Тканина та декор</a></li>
+                    <li><a href="#">Текстиль для кухні</a></li>
+                    <li><a href="#">Римські штори</a></li>
+                    <li><a href="#">Ламбрекени</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Інформація</h4>
+                <ul>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Портфоліо</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p>м. Хмельницький, вул. Зарічанська 13</p>
+                <p><a href="tel:+380979271464">+38 097 927 14 64</a></p>
+                <p><a href="mailto:firankashop@gmail.com">firankashop@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Made in Webflow | Powered by Wized</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Показати більше товарів
+    const products = document.querySelectorAll('.product-card');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    let visibleCount = 4;
+
+    function updateVisibleProducts() {
+        products.forEach((product, index) => {
+            if (index < visibleCount) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+
+        if (visibleCount >= products.length) {
+            loadMoreBtn.style.display = 'none';
+        }
+    }
+
+    loadMoreBtn.addEventListener('click', function() {
+        visibleCount = Math.min(visibleCount + 4, products.length);
+        updateVisibleProducts();
+    });
+
+    updateVisibleProducts();
+</script>
+
+</body>
+</html>
