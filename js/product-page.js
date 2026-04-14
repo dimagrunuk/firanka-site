@@ -188,3 +188,140 @@ if (minus && plus && qtySpan) {
         if (val < 99) qtySpan.innerText = val + 1;
     });
 }
+// ... ваші дані products (з правильними шляхами ../assets/...)
+
+// Глобальні змінні для галереї
+let galleryImages = [];
+let currentLightboxIndex = 0;
+
+// Функція створення галереї (мініатюри)
+function setupGallery(images) {
+    const container = document.getElementById('galleryThumbs');
+    const mainImg = document.getElementById('productImage');
+    if (!container || !mainImg) return;
+
+    galleryImages = images;
+    container.innerHTML = '';
+
+    images.forEach((src, idx) => {
+        const thumb = document.createElement('div');
+        thumb.className = 'thumb';
+        const img = document.createElement('img');
+        img.src = src;
+        thumb.appendChild(img);
+        thumb.addEventListener('click', () => {
+            mainImg.src = src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        });
+        container.appendChild(thumb);
+    });
+
+    if (container.firstChild) container.firstChild.classList.add('active');
+    mainImg.src = images[0];
+
+    // Лайтбокс по кліку на головне фото
+    mainImg.addEventListener('click', () => {
+        const currentSrc = mainImg.src;
+        const index = galleryImages.findIndex(s => s === currentSrc);
+        openLightbox(index !== -1 ? index : 0);
+    });
+}
+
+// Лайтбокс зі стрілками
+function openLightbox(startIndex) {
+    if (!galleryImages.length) return;
+    currentLightboxIndex = startIndex;
+
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.style.cssText = `
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.9); display: flex; align-items: center;
+        justify-content: center; z-index: 10000;
+    `;
+
+    const imgContainer = document.createElement('div');
+    imgContainer.style.position = 'relative';
+    imgContainer.style.display = 'flex';
+    imgContainer.style.alignItems = 'center';
+    imgContainer.style.justifyContent = 'center';
+    imgContainer.style.maxWidth = '90%';
+    imgContainer.style.maxHeight = '90%';
+
+    const img = document.createElement('img');
+    img.src = galleryImages[currentLightboxIndex];
+    img.style.maxWidth = '100%';
+    img.style.maxHeight = '100%';
+    img.style.borderRadius = '10px';
+
+    const prevBtn = document.createElement('button');
+    prevBtn.innerHTML = '❮';
+    prevBtn.style.cssText = `
+        position: absolute; left: -50px; background: rgba(255,255,255,0.7);
+        border: none; font-size: 36px; width: 50px; height: 50px;
+        border-radius: 50%; cursor: pointer;
+    `;
+    prevBtn.onclick = (e) => {
+        e.stopPropagation();
+        currentLightboxIndex = (currentLightboxIndex - 1 + galleryImages.length) % galleryImages.length;
+        img.src = galleryImages[currentLightboxIndex];
+    };
+
+    const nextBtn = document.createElement('button');
+    nextBtn.innerHTML = '❯';
+    nextBtn.style.cssText = `
+        position: absolute; right: -50px; background: rgba(255,255,255,0.7);
+        border: none; font-size: 36px; width: 50px; height: 50px;
+        border-radius: 50%; cursor: pointer;
+    `;
+    nextBtn.onclick = (e) => {
+        e.stopPropagation();
+        currentLightboxIndex = (currentLightboxIndex + 1) % galleryImages.length;
+        img.src = galleryImages[currentLightboxIndex];
+    };
+
+    imgContainer.appendChild(img);
+    imgContainer.appendChild(prevBtn);
+    imgContainer.appendChild(nextBtn);
+    lightbox.appendChild(imgContainer);
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) lightbox.remove();
+    });
+
+    document.body.appendChild(lightbox);
+}
+
+function loadProductData() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');   // ОГОЛОШЕННЯ ЗМІННОЇ
+
+    if (productId && products[productId]) {
+        const p = products[productId];
+        document.getElementById('productName').textContent = p.name;
+        document.getElementById('productCode').textContent = p.code;
+        document.getElementById('currentPrice').textContent = p.currentPrice;
+        document.getElementById('oldPrice').textContent = p.oldPrice;
+        document.getElementById('productImage').src = p.img;
+        document.getElementById('category').textContent = p.category;
+        document.getElementById('quantity').textContent = p.quantity;
+        document.getElementById('color').textContent = p.color;
+        document.getElementById('size').textContent = p.size;
+        document.getElementById('stockCount').textContent = p.stock;
+        if (document.getElementById('productDescription')) {
+            document.getElementById('productDescription').innerHTML = p.description;
+        }
+
+        // Галерея
+        const images = [
+            p.img,
+            p.img2 || p.img,
+            p.img3 || p.img,
+            p.img4 || p.img
+        ];
+        if (typeof setupGallery === 'function') setupGallery(images);
+    } else {
+        console.log('Товар не знайдено. ID:', productId);
+    }
+}

@@ -16,7 +16,6 @@
 
 <main class="product-page">
     <div class="container">
-
         <div class="breadcrumbs">
             <a href="../index.html">Home</a> /
             <a href="../index.html#catalog">Каталог</a> /
@@ -25,18 +24,19 @@
 
         <div class="product-card-page">
             <div class="product-grid">
-
+                <!-- ЛІВА КОЛОНКА: ГАЛЕРЕЯ -->
                 <div class="product-gallery">
                     <div class="main-image">
-                        <img src="../assets/imagescatalog/catalog1.jpg" alt="Товар" id="productImage">
+                        <img id="productImage" src="../assets/imagescatalog/catalog1.jpg" alt="Товар">
                     </div>
+                    <div class="gallery-thumbs" id="galleryThumbs"></div>
                 </div>
 
+                <!-- ПРАВА КОЛОНКА: ІНФОРМАЦІЯ + ОПИС + ПОСИЛАННЯ -->
                 <div class="product-info">
                     <h1 id="productName">Комплект декоративних подушок</h1>
                     <div class="product-code">
-                        <span>код:</span>
-                        <span id="productCode">--</span>
+                        <span>код:</span> <span id="productCode">--</span>
                     </div>
 
                     <div class="product-price-block">
@@ -46,31 +46,14 @@
                         </div>
                         <div class="old-price" id="oldPrice">--</div>
                     </div>
+
                     <div class="product-attributes">
-                        <div class="attr-row">
-                            <div class="attr-label">Категорія:</div>
-                            <div class="attr-value" id="category">--</div>
-                        </div>
-                        <div class="attr-row">
-                            <div class="attr-label">Комплектація:</div>
-                            <div class="attr-value">Подушки + наволочки</div>
-                        </div>
-                        <div class="attr-row">
-                            <div class="attr-label">Малюнок тканини:</div>
-                            <div class="attr-value">Дамаск, коронка</div>
-                        </div>
-                        <div class="attr-row">
-                            <div class="attr-label">Кількість подушок:</div>
-                            <div class="attr-value" id="quantity">--</div>
-                        </div>
-                        <div class="attr-row">
-                            <div class="attr-label">Колір:</div>
-                            <div class="attr-value" id="color">--</div>
-                        </div>
-                        <div class="attr-row">
-                            <div class="attr-label">Розмір:</div>
-                            <div class="attr-value" id="size">--</div>
-                        </div>
+                        <div class="attr-row"><div class="attr-label">Категорія:</div><div class="attr-value" id="category">--</div></div>
+                        <div class="attr-row"><div class="attr-label">Комплектація:</div><div class="attr-value">Подушки + наволочки</div></div>
+                        <div class="attr-row"><div class="attr-label">Малюнок тканини:</div><div class="attr-value">Дамаск, коронка</div></div>
+                        <div class="attr-row"><div class="attr-label">Кількість подушок:</div><div class="attr-value" id="quantity">--</div></div>
+                        <div class="attr-row"><div class="attr-label">Колір:</div><div class="attr-value" id="color">--</div></div>
+                        <div class="attr-row"><div class="attr-label">Розмір:</div><div class="attr-value" id="size">--</div></div>
                     </div>
 
                     <div class="stock-status">
@@ -88,22 +71,28 @@
                         <button type="button" class="cart-button">Додати до кошика</button>
                     </div>
 
+                    <!-- ОПИС ТЕПЕР В ПРАВІЙ КОЛОНЦІ -->
+                    <div class="product-description">
+                        <h3>Опис</h3>
+                        <div id="productDescription">
+                            <p>Наволочки + подушки.</p>
+                            <p>Подушки двосторонні.</p>
+                            <p>Прихована блискавка.</p>
+                            <p>Тканина Туреччина.</p>
+                            <p>Наповнювач холофайбер.</p>
+                        </div>
+                    </div>
+
+                    <!-- ПОСИЛАННЯ "ВСІ ДЕКОРАТИВНІ ПОДУШКИ" -->
+                    <div class="category-link">
+                        <a href="#" id="categoryLink">Всі декоративні подушки →</a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="product-description">
-            <h3>Опис</h3>
-            <div id="productDescription">
-                <p>Наволочки + подушки.</p>
-                <p>Подушки двосторонні.</p>
-                <p>Прихована блискавка.</p>
-                <p>Тканина Туреччина.</p>
-                <p>Наповнювач холофайбер.</p>
-            </div>
-        </div>
 
-    </div>
-</main>
+
 <!-- СХОЖІ ТОВАРИ -->
 <div class="related-products">
     <h3>Схожі товари</h3>
