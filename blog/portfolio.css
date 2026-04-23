@@ -1,0 +1,196 @@
+/* ========== ПОРТФОЛІО – ДИЗАЙН 1 В 1 ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F5F6FA;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Заголовок сторінки */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #3D3D3D;
+    margin-bottom: 30px;
+}
+
+/* Лейаут: фільтри + сітка */
+.portfolio-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+}
+
+/* ========== ФІЛЬТРИ ========== */
+.filters {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.filters h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2C2C2C;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filter-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    background: white;
+    transition: 0.2s;
+}
+
+.filter-input:focus {
+    outline: none;
+    border-color: #6A4D67;
+}
+
+.filter-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.filter-list li {
+    margin-bottom: 12px;
+}
+
+.filter-list label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.filter-list input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #6A4D67;
+    cursor: pointer;
+}
+
+.filter-reset {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: #6A4D67;
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.filter-count {
+    font-size: 13px;
+    color: #888;
+    margin-top: 10px;
+}
+
+.filter-count span {
+    font-weight: 600;
+    color: #6A4D67;
+}
+
+/* ========== СІТКА ПОРТФОЛІО ========== */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.portfolio-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 4 / 3;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    color: white;
+}
+
+.portfolio-tag {
+    display: inline-block;
+    background: #6A4D67;
+    color: white;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.portfolio-card-overlay h3 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Адаптація */
+@media (max-width: 900px) {
+    .portfolio-layout {
+        grid-template-columns: 1fr;
+    }
+    .filters {
+        position: static;
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        padding: 20px 15px;
+    }
+}
