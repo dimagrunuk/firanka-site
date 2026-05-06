@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Комплект панельних шторок Нью-Йорк Париж</title>
+    <meta name="description" content="Комплект панельних шторок Нью-Йорк Париж. Панельки 4шт. Карниз 2м. Малюнки на лазерній різці. Тканина шифон та велюр." />
+    <style>
+        :root {
+            --bg: #ffffff;
+            --card: #ffffff;
+            --border: #e5e7eb;
+            --foreground: #111827;
+            --muted: #6b7280;
+            --secondary: #f3f4f6;
+            --primary: #111827;
+            --primary-fg: #ffffff;
+            --accent-purple: rgba(102, 51, 153, 0.9);
+        }
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--foreground);
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+        img { display: block; max-width: 100%; }
+        a { color: inherit; text-decoration: none; }
+
+        /* Header strip */
+        header.topbar {
+            height: 64px;
+            border-bottom: 1px solid var(--border);
+            background: var(--card);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 16px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+        .breadcrumb a:hover { color: var(--foreground); }
+        .breadcrumb .sep { margin: 0 8px; }
+        .breadcrumb .current { color: var(--foreground); }
+
+        /* Layout */
+        .grid-2 {
+            display: grid;
+            gap: 40px;
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 1024px) {
+            .grid-2 { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* Gallery */
+        .main-image {
+            overflow: hidden;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background: var(--card);
+        }
+        .main-image img { width: 100%; height: auto; object-fit: cover; }
+
+        .thumbs {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .thumbs button {
+            padding: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: none;
+            cursor: pointer;
+            transition: border-color .2s;
+        }
+        .thumbs button.active { border-color: var(--foreground); }
+        .thumbs img { width: 100%; height: 96px; object-fit: cover; }
+
+        /* Tags */
+        .tags {
+            margin-top: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .tag {
+            border: 1px solid var(--border);
+            background: var(--card);
+            padding: 8px 16px;
+            border-radius: 9999px;
+            font-size: 14px;
+        }
+
+        /* Info */
+        h1.title {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+        .desc { margin-top: 32px; }
+        .desc p { margin: 0 0 8px; }
+
+        blockquote.review {
+            margin: 32px 0 0;
+            border: 1px solid var(--border);
+            background: rgba(243, 244, 246, 0.5);
+            padding: 24px;
+            border-radius: 16px;
+            font-style: italic;
+        }
+
+        .price {
+            margin-top: 32px;
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+        }
+        .price .label { color: var(--muted); }
+        .price .value { font-size: 30px; font-weight: 700; }
+
+        /* Form */
+        .order-form {
+            margin-top: 40px;
+            border: 1px solid var(--border);
+            background: var(--card);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        }
+        .order-form h2 { font-size: 24px; font-weight: 700; margin: 0 0 24px; }
+        .order-form input {
+            width: 100%;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 16px;
+            outline: none;
+        }
+        .order-form input:focus { border-color: var(--foreground); }
+        .order-form .note { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
+        .product-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+        .product-row img { width: 56px; height: 56px; border-radius: 4px; object-fit: cover; }
+        .product-row span { font-size: 14px; }
+        button.submit {
+            width: 100%;
+            background: var(--primary);
+            color: var(--primary-fg);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity .2s;
+        }
+        button.submit:hover { opacity: 0.9; }
+        .success { margin-top: 24px; }
+
+        /* Related */
+        .related { margin-top: 80px; }
+        .related h2 {
+            font-size: 30px;
+            font-weight: 700;
+            font-style: italic;
+            margin: 0 0 32px;
+        }
+        .related-grid {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 640px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .related-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        .card {
+            position: relative;
+            display: block;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background: var(--secondary);
+        }
+        .card .bg {
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+        }
+        .card .label {
+            position: absolute;
+            left: 12px; right: 12px; bottom: 12px;
+            background: var(--accent-purple);
+            color: #fff;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            backdrop-filter: blur(4px);
+        }
+
+        .more-wrap { margin-top: 40px; display: flex; justify-content: center; }
+        .more-btn {
+            border: 1px solid var(--border);
+            background: var(--card);
+            padding: 12px 32px;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: background .2s;
+        }
+        .more-btn:hover { background: var(--secondary); }
+    </style>
+</head>
+<body>
+
+<header class="topbar"></header>
+
+<main>
+    <nav class="breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span>
+        <a href="/">Портфоліо</a><span class="sep">/</span>
+        <span class="current">Комплект панельних шторок Нью-Йорк Париж</span>
+    </nav>
+
+    <div class="grid-2">
+        <!-- Gallery -->
+        <div>
+            <div class="main-image">
+                <img id="mainImg"
+                     src="https://cdn.prod.website-files.com/6521c7679d2009286dbc6f86/666762504f0beed4c6d47daf_%E2%84%9629_2%D0%BF%20(2).jpg"
+                     alt="Комплект панельних шторок з зображенням ейфелевої вежі та статуї свободи" />
+            </div>
+
+            <div class="thumbs" id="thumbs">
+                <button class="active" data-src="https://cdn.prod.website-files.com/6521c7679d2009286dbc6f86/666762504f0beed4c6d47daf_%E2%84%9629_2%D0%BF%20(2).jpg">
+                    <img src="https://cdn.prod.website-files.com/6521c7679d2009286dbc6f86/666762504f0beed4c6d47daf_%E2%84%9629_2%D0%BF%20(2).jpg" alt="" />
+                </button>
+                <button data-src="https://cdn.prod.website-files.com/6521c7679d2009286dbc6f86/666762504f0beed4c6d47daf_%E2%84%9629_2%D0%BF%20(2).jpg">
+                    <img src="https://cdn.prod.website-files.com/6521c7679d2009286dbc6f86/666762504f0beed4c6d47daf_%E2%84%9629_2%D0%BF%20(2).jpg" alt="" />
+                </button>
+                <button data-src="https://cdn.prod.website-files.com/6521c7679d2009286dbc6f86/666762504f0beed4c6d47daf_%E2%84%9629_2%D0%BF%20(2).jpg">
+                    <img src="https://cdn.prod.website-files.com/6521c7679d2009286dbc6f86/666762504f0beed4c6d47daf_%E2%84%9629_2%D0%BF%20(2).jpg" alt="" />
+                </button>
+            </div>
+
+            <div class="tags">
+                <span class="tag">Дитяча кімната</span>
+                <span class="tag">Шифон</span>
+                <span class="tag">Велюр</span>
+                <span class="tag">Ексклюзивні, принтовані</span>
+            </div>
+        </div>
+
+        <!-- Info -->
+        <div>
+            <h1 class="title">Комплект панельних шторок Нью-Йорк Париж</h1>
+
+            <div class="desc">
+                <p>Панельки 4шт в комплекті.</p>
+                <p>Карниз 2м. Висота крайньої панельки 1,50м.</p>
+                <p>Малюнки зроблені індивідуально на лазерній різці.</p>
+                <p>Тканина шифон та велюр</p>
+            </div>
+
+            <blockquote class="review">
+                Дякую. Задоволені. Були виконані всі побажання при замовлені. Кристина, м.Шостка
+            </blockquote>
+
+            <div class="price">
+                <span class="label">Орієнтовна вартість від</span>
+                <span class="value">40</span>
+                <span>дол.</span>
+            </div>
+
+            <div class="order-form">
+                <h2>Замовити схожу модель</h2>
+                <form id="orderForm">
+                    <input type="text" placeholder="Ім'я" required />
+                    <input type="email" placeholder="E-mail" required />
+                    <input type="tel" placeholder="Телефон" required />
+                    <p class="note">* Я хочу замовити схожу модель</p>
+                    <div class="product-row">
+                        <img src="https://cdn.prod.website-files.com/6521c7679d2009286dbc6f86/666762504f0beed4c6d47daf_%E2%84%9629_2%D0%BF%20(2).jpg" alt="" />
+                        <span>Комплект панельних шторок Нью-Йорк Париж</span>
+                    </div>
+                    <button type="submit" class="submit">Надіслати</button>
+                </form>
+                <p class="success" id="success" style="display:none;">Дякуємо! Ми зв'яжемося з вами найближчим часом.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="related">
+        <h2>З цим товаром переглядають</h2>
+        <div class="related-grid">
+            <a href="#" class="card"><div class="bg"></div><div class="label">Напівпрозора панельна гардина Осінь на петлях</div></a>
+            <a href="#" class="card"><div class="bg"></div><div class="label">Комплект штори та ламбрекен Венеція</div></a>
+            <a href="#" class="card"><div class="bg"></div><div class="label">Штора та дерев'яні жалюзі, кабінет генерального директора</div></a>
+            <a href="#" class="card"><div class="bg"></div><div class="label">Арочне вікно в дитячій кімнаті</div></a>
+            <a href="#" class="card"><div class="bg"></div><div class="label">Кухня з виходом на балкон, штора та тюль</div></a>
+            <a href="#" class="card"><div class="bg"></div><div class="label">Комплект штор та покривало Блакитні</div></a>
+        </div>
+        <div class="more-wrap">
+            <button class="more-btn">Більше ›</button>
+        </div>
+    </section>
+</main>
+
+<script>
+    // Thumbnail switching
+    const mainImg = document.getElementById('mainImg');
+    document.querySelectorAll('#thumbs button').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('#thumbs button').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            mainImg.src = btn.dataset.src;
+        });
+    });
+
+    // Form submit
+    const form = document.getElementById('orderForm');
+    const success = document.getElementById('success');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        form.style.display = 'none';
+        success.style.display = 'block';
+    });
+</script>
+
+</body>
+</html>
